@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="#" />
+  <title>Evaluate A News Article with NLP</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>
+      Evaluate A News Article with NLP
+    </h1>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section>
+        <form id="form">
+          <label for="url">URL</label>
+          <input id="article-url" type="text" name="input" value="" placeholder="Enter Article URL here" />
+          <button type="submit" class="btn">
+            Submit
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <strong>Form Results:</strong>
+        <div id="text"></div>
+        <div id="agreement"></div>
+        <div id="confidence"></div>
+        <div id="subjectivity"></div>
+        <div id="irony"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer__site-info">
+        <p>&copy; 2024 Nadia ALMakhmari . All rights reserved.</p>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+      })
+    }
+  </script>
+</body>
+
+</html>
